@@ -7,15 +7,24 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const dashboardRoutes: Routes = [
+
+    {
+        // path: 'animals', // Cmabia para activar lazy loading
+        path: 'dashboard',
+        component: DashboardComponent,
+        children: [
             {path: 'employee', component: EmployeeComponent},
             {path: 'projects', component: ProjectsComponent},
             {path: 'default', component: DashboardDefaultComponent},
             {path: '', component: DashboardDefaultComponent},
             {path: '**', component: PageNotFoundComponent}
+        ]
+    }
+
     ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(dashboardRoutes)],
+    imports: [RouterModule.forChild(dashboardRoutes)],
     exports: [RouterModule],
     declarations: [],
 })

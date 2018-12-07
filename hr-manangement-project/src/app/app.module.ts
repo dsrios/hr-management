@@ -27,9 +27,9 @@ import { DashboardModule } from './dashboard/dashboard.module';
   ],
   imports: [
     BrowserModule,
+    DashboardModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DashboardModule
 
   ],
   providers: [],

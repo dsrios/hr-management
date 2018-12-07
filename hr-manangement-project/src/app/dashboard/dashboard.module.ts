@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
          CommonModule,
          DashboardRouting
         ],
-    exports: [  ],
+    exports: [ DashboardRouting ],
     declarations: [
         DashboardDefaultComponent,
         EmployeeComponent,
