@@ -13,6 +13,12 @@ import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.co
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 
+// Material Modules
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +36,8 @@ import { DashboardModule } from './dashboard/dashboard.module';
     DashboardModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule
 
   ],
   providers: [],

@@ -1,3 +1,22 @@
-<p>
-  login works!
-</p>
+<div class="container-login">
+
+  <mat-card>
+    <mat-card-title>HR MANANGEMENT</mat-card-title>
+    <mat-card-subtitle>LOGIN</mat-card-subtitle>
+    <mat-card-content>
+      <div>
+          <label>Username: </label>
+          <input type="text" #username>
+      </div>
+      <br>
+      <div>
+        <label>Password: </label>
+        <input type="password" #password>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="makeLogin(username.value, password.value)">Enter</button>
+      <button mat-raised-button color="warn">Cancel</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
