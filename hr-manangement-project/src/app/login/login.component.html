@@ -13,10 +13,14 @@
         <label>Password: </label>
         <input type="password" #password>
       </div>
+      <br>
+      <div>
+        <span *ngIf="!loginValid" style="color: red">* User or Password invalid</span>
+      </div>
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button color="primary" (click)="makeLogin(username.value, password.value)">Enter</button>
-      <button mat-raised-button color="warn">Cancel</button>
+      <!-- <button mat-raised-button color="warn">Cancel</button> -->
     </mat-card-actions>
   </mat-card>
 </div>
