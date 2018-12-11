@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit {
 
   showFiller = false;
+  localStorage = localStorage.getItem('user_logged');
 
   constructor() { }
 

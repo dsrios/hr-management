@@ -1,18 +1,27 @@
-<mat-drawer-container class="example-container" autosize>
-    <mat-drawer #drawer class="example-sidenav" mode="side">
-      <p>Auto-resizing sidenav</p>
-      <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side">
+      <p>Routes for the user {{ localStorage }}</p>
+      <!-- <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p> -->
       <button (click)="showFiller = !showFiller" mat-raised-button>
-        Toggle extra text
+        Emloyees
+      </button>
+      <br>
+      <button (click)="showFiller = !showFiller" mat-raised-button>
+        Projects
+      </button>
+      <br>
+      <button (click)="showFiller = !showFiller" mat-raised-button>
+        Logout
       </button>
     </mat-drawer>
   
-    <div class="example-sidenav-content">
-      <button type="button" mat-button (click)="drawer.toggle()">
-          <i class="material-icons">menu</i>
-      </button>
+    <div class="sidenav-content">
+      
 
-      <div class="container">
+      <div class="sidenav-content-head">
+          <button type="button" mat-button (click)="drawer.toggle()">
+              <i class="material-icons">menu</i>
+          </button>
           <h1>HR MANAGEMENT</h1>
       </div>
       <br>
