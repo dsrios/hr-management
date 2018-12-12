@@ -11,15 +11,9 @@ import {MatTableDataSource} from '@angular/material';
   styleUrls: ['./employee.component.scss']
 })
 export class EmployeeComponent implements OnInit {
-  employeeList = [{Id: 0,
-    age: 36,
-    birthday: '8/27/2005',
-    company: 'Croatia',
-    favorite_color: 'non',
-    name: 'Mrs. Rickey Dicki',
-    project: 'Herzogville Clarabelle'
-  }];
+  employeeList = [];
   urlEmployees = './employees';
+  
   displayedColumns: string[] = ['Id', 'name', 'age', 'project', 'birthday', 'company', 'favorite_color'];
   dataSource = new MatTableDataSource(this.employeeList);
 

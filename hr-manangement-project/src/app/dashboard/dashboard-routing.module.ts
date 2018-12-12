@@ -5,6 +5,7 @@ import { EmployeeComponent } from './../dashboard/employee/employee.component';
 import { DashboardComponent } from './dashboard.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AppGuard } from '../app.guard';
 
 const dashboardRoutes: Routes = [
 
@@ -13,9 +14,9 @@ const dashboardRoutes: Routes = [
         path: 'dashboard',
         component: DashboardComponent,
         children: [
-            {path: 'employee', component: EmployeeComponent},
-            {path: 'projects', component: ProjectsComponent},
-            {path: 'default', component: DashboardDefaultComponent},
+            {path: 'employee', component: EmployeeComponent, canActivate: [AppGuard]},
+            {path: 'projects', component: ProjectsComponent, canActivate: [AppGuard]},
+            {path: 'default', component: DashboardDefaultComponent, canActivate: [AppGuard]},
             {path: '', component: DashboardDefaultComponent},
             {path: '**', component: PageNotFoundComponent}
         ]
@@ -27,5 +28,6 @@ const dashboardRoutes: Routes = [
     imports: [RouterModule.forChild(dashboardRoutes)],
     exports: [RouterModule],
     declarations: [],
+    providers: [AppGuard]
 })
 export class DashboardRouting { }
