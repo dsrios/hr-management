@@ -13,15 +13,22 @@ import { DataService } from '../shared/data.service';
 
 // Material Module
 import {MatButtonModule} from '@angular/material/button';
+import {MatSortModule} from '@angular/material/sort';
+import {MatTableModule} from '@angular/material/table';
+
+
+
 
 @NgModule({
     imports:
         [
          CommonModule,
          DashboardRouting,
-         MatButtonModule,
-         HttpClientModule
+         HttpClientModule,
          // HttpClientInMemoryWebApiModule.forRoot(DataService),
+         MatButtonModule,
+         MatSortModule,
+         MatTableModule
         ],
     exports: [ DashboardRouting ],
     declarations: [
