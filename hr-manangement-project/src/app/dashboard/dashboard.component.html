@@ -2,15 +2,19 @@
     <mat-drawer #drawer class="sidenav" mode="side">
       <p>Routes for the user {{ localStorage }}</p>
       <!-- <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p> -->
-      <button (click)="showFiller = !showFiller" mat-raised-button>
-        Emloyees
+      <button class="button-bar" mat-raised-button routerLink="/dashboard/default" routerLinkActive="active">
+        Dashboard
       </button>
       <br>
-      <button (click)="showFiller = !showFiller" mat-raised-button>
+      <button class="button-bar" mat-raised-button routerLink="/dashboard/employee" routerLinkActive="active">
+        Employees
+      </button>
+      <br>
+      <button class="button-bar" mat-raised-button routerLink="/dashboard/projects" routerLinkActive="active">
         Projects
       </button>
       <br>
-      <button (click)="showFiller = !showFiller" mat-raised-button>
+      <button class="button-bar" (click)="logout()" mat-raised-button>
         Logout
       </button>
     </mat-drawer>

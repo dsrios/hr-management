@@ -151,7 +151,12 @@ export class DataService implements InMemoryDbService {
       }
     ];
 
-    return {employees, projects};
+    const loginUsers = [
+      { username: 'dsrios', password: '1991'},
+      { username: 'administrator', password: 'Yuxi2018'}
+    ];
+
+    return {employees, projects, loginUsers};
   }
 
   constructor() { }

@@ -6,11 +6,22 @@ import { NgModule } from '@angular/core';
 import { DashboardRouting } from './dashboard-routing.module';
 import { CommonModule } from '@angular/common';
 
+// Service Module and dummy DB
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { HttpClientModule } from '@angular/common/http';
+import { DataService } from '../shared/data.service';
+
+// Material Module
+import {MatButtonModule} from '@angular/material/button';
+
 @NgModule({
     imports:
         [
          CommonModule,
-         DashboardRouting
+         DashboardRouting,
+         MatButtonModule,
+         HttpClientModule
+         // HttpClientInMemoryWebApiModule.forRoot(DataService),
         ],
     exports: [ DashboardRouting ],
     declarations: [

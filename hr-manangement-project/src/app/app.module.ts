@@ -13,7 +13,7 @@ import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.co
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { HttpClientInMemoryWebApiModule, InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClientModule } from '@angular/common/http';
 
 // inMemory service
@@ -46,14 +46,15 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(LoginService),
+    InMemoryWebApiModule.forRoot(DataService),
+    // HttpClientInMemoryWebApiModule.forRoot(LoginService),
     // HttpClientInMemoryWebApiModule.forRoot(DataService),
     MatCardModule,
     MatButtonModule,
     MatSidenavModule
 
   ],
-  providers: [ LoginService, DataService ],
+  providers: [ DataService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

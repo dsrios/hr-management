@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,9 +11,15 @@ export class DashboardComponent implements OnInit {
   showFiller = false;
   localStorage = localStorage.getItem('user_logged');
 
-  constructor() { }
+  constructor( private router: Router  ) { }
 
   ngOnInit() {
   }
+
+  logout () {
+    this.router.navigate(['/login']);
+    localStorage.clear();
+  }
+
 
 }
